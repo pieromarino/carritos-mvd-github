@@ -1,0 +1,68 @@
+body {
+  padding: 0;
+  margin: 55px 0 55px 0;
+  font-family: sans-serif;
+  overflow: hidden;
+}
+
+.top-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 55px;
+  -webkit-box-shadow: 2px 0px 8px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 0px 8px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 2px 0px 8px 0px rgba(0, 0, 0, 0.75);
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.logo {
+  color: rgb(87, 87, 87);
+  margin-left: 3px;
+}
+
+.logo-img {
+  height: 36px;
+  margin-right: 3px;
+}
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 55px;
+  -webkit-box-shadow: 2px 0px 8px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 0px 8px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 2px 0px 8px 0px rgba(0, 0, 0, 0.75);
+  background-color: white;
+  display: flex;
+  overflow-x: auto;
+}
+
+.nav-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  min-width: 50px;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 14px;
+  color: grey;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: background-color 0.15s ease-in-out;
+}
+
+.nav-link:hover {
+  background-color: lightgray;
+}
+
+.nav-link-active {
+  color: #009578;
+}
