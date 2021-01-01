@@ -47,7 +47,7 @@ const createMarker = (name, lng, lat) => {
         .addTo(map)
 }
 
-fetch('https://pieromarino.github.io/carritos-uy-github/foodtrucks.json')
+fetch('https://pieromarino.github.io/carritos-mvd-github/foodtrucks.json')
     .then(res => res.json())
     .then(res => {
         res.map(marker => createMarker(marker.name ,marker.lng, marker.lat))
