@@ -14,6 +14,19 @@ const createMarker = (name, lng, lat) => {
         .addTo(map)
 }
 
+const createCustomMarker = (lng, lat) => {
+    const el = document.createElement('div')
+    el.className = 'marker'
+    el.style.backgroundImage =
+        'url(https://placekitten.com/g/120/)'
+    el.style.height = '120px'
+    el.style.width = '120px'
+
+    new mapboxgl.Marker(el)
+        .setLngLat([lng,lat])
+        .addTo(map)
+}
+
 fetch('https://pieromarino.github.io/carritos-mvd-github/foodtrucks.json')
     .then(res => res.json())
     .then(res => {
