@@ -7,10 +7,10 @@ center: [-56.18612076723386, -34.90607253440899], // starting position [lng, lat
 zoom: 14, // starting zoom
 });
 
-const createMarker = (name, lng, lat) => {
+const createMarker = (name, lng, lat, rating) => {
     const marker = new mapboxgl.Marker()
         .setLngLat([lng, lat])
-        .setPopup(new mapboxgl.Popup().setHTML(`<h3>${name}</h3>`))
+        .setPopup(new mapboxgl.Popup().setHTML(`<h3>${name}</h3> <br/> <p>Rating: ${rating}</p>`))
         .addTo(map)
 }
 
@@ -30,7 +30,7 @@ const createCustomMarker = (lng, lat) => {
 fetch('https://pieromarino.github.io/carritos-mvd-github/foodtrucks.json')
     .then(res => res.json())
     .then(res => {
-        res.map(marker => createMarker(marker.name ,marker.lng, marker.lat))
+        res.map(marker => createMarker(marker.name ,marker.lng, marker.lat, marker.rating))
     })
 
 /* map.on('mousemove', (e) => {
